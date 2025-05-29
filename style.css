@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* ganti sesuai kebutuhan */
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  backdrop-filter: blur(6px);
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2f4f4f;
+}
+
+h2 {
+  color: #4169e1;
+  margin-top: 30px;
+}
+
+p.text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4169e1;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #27408b;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Assessment of Reading Comprehension</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    /* Home Page */
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .home-content {
+      color: white;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    .home h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .home button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffcc00;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .home button:hover {
+      background-color: #ffd633;
+    }
+
+    /* Quiz Page */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #2c3e50;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    button[type="button"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button[type="button"]:hover {
+      background-color: #2980b9;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Halaman Home -->
+  <div class="home" id="homePage">
+    <div class="home-content">
+      <h1>Welcome to the Reading Assessment test</h1>
+      <p>Febbyona Corputty Id ( 202236057 )</p>
+      <button onclick="startQuiz()">Start Assessment</button>
+    </div>
+  </div>
+
+  <!-- Halaman Kuis -->
+  <div class="container" id="quizPage" style="display: none;">
+    <h1>Digital Assessment of Reading Comprehension</h1>
+    <p class="text">
+      <strong>"The Honest Woodcutter"</strong><br>
+      Once upon a time, a poor woodcutter was cutting wood near a river. Suddenly, his axe slipped from his hands and fell into the water. He was very sad because it was his only axe. Then, a fairy appeared and asked what happened. The woodcutter told the truth. The fairy showed him a golden axe, but he said it was not his. Then she showed him a silver axe, and again he said no. Finally, she showed his old axe. The woodcutter was happy and said it was his. The fairy gave him all three axes because he was honest.
+    </p>
+
+    <form id="quizForm">
+      <h2>Multiple Choice Questions</h2>
+
+      <div class="question">
+        <label>1. What happened to the woodcutter’s axe?</label><br/>
+        <input type="radio" name="q1" value="d"/> A. It fell into the river<br/>
+        <input type="radio" name="q1" value="a"/> B. He sold it<br/>
+        <input type="radio" name="q1" value="b"/> C. He gave it to the fairy<br/>
+        <input type="radio" name="q1" value="c"/> D. It broke
+      </div>
+
+      <div class="question">
+        <label>2. Why was the woodcutter sad?</label><br/>
+        <input type="radio" name="q2" value="a"/> A. He lost his axe<br/>
+        <input type="radio" name="q2" value="b"/> B. He was hungry<br/>
+        <input type="radio" name="q2" value="c"/> C. He had no money<br/>
+        <input type="radio" name="q2" value="d"/> D. The fairy was angry
+      </div>
+
+      <div class="question">
+        <label>3. Who appeared to help the woodcutter?</label><br/>
+        <input type="radio" name="q3" value="b"/> A. A fairy<br/>
+        <input type="radio" name="q3" value="a"/> B. A fisherman<br/>
+        <input type="radio" name="q3" value="c"/> C. A king<br/>
+        <input type="radio" name="q3" value="d"/> D. A dragon
+      </div>
+
+      <div class="question">
+        <label>4. What did the fairy show first?</label><br/>
+        <input type="radio" name="q4" value="c"/> A. A golden axe<br/>
+        <input type="radio" name="q4" value="b"/> B. A silver axe<br/>
+        <input type="radio" name="q4" value="a"/> C. The old axe<br/>
+        <input type="radio" name="q4" value="d"/> D. A magic stick
+      </div>
+
+      <div class="question">
+        <label>5. What did the woodcutter say when he saw the golden axe?</label><br/>
+        <input type="radio" name="q5" value="c"/> A. It was not his<br/>
+        <input type="radio" name="q5" value="a"/> B. It was his<br/>
+        <input type="radio" name="q5" value="b"/> C. It was beautiful<br/>
+        <input type="radio" name="q5" value="d"/> D. He wanted it
+      </div>
+
+      <div class="question">
+        <label>6. Why did the fairy give him all three axes?</label><br/>
+        <input type="radio" name="q6" value="c"/> A. He was honest<br/>
+        <input type="radio" name="q6" value="a"/> B. He was lucky<br/>
+        <input type="radio" name="q6" value="b"/> C. He was poor<br/>
+        <input type="radio" name="q6" value="d"/> D. He was strong
+      </div>
+
+      <h2>True/False Questions</h2>
+
+      <div class="question">
+        <label>7. The woodcutter lied to the fairy.</label><br/>
+        <input type="radio" name="q7" value="false"/> False<br/>
+        <input type="radio" name="q7" value="true"/> True
+      </div>
+
+      <div class="question">
+        <label>8. The fairy gave him only the golden axe.</label><br/>
+        <input type="radio" name="q8" value="false"/> False<br/>
+        <input type="radio" name="q8" value="true"/> True
+      </div>
+
+      <div class="question">
+        <label>9. The woodcutter got all three axes in the end.</label><br/>
+        <input type="radio" name="q9" value="true"/> True<br/>
+        <input type="radio" name="q9" value="false"/> False
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function startQuiz() {
+      document.getElementById("homePage").style.display = "none";
+      document.getElementById("quizPage").style.display = "block";
+    }
+
+    function checkAnswers() {
+      // Placeholder logic – you can expand this
+      document.getElementById("result").innerText = "Thank you for submitting!";
+    }
+  </script>
+</body>
+</html>
